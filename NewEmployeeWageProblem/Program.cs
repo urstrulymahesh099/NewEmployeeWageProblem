@@ -13,7 +13,12 @@ namespace NewEmployeeWageProblem
                 switch(option)
                 {
                     case 1:
-                        EmployeeWage.Attendence();
+                        EmployeeWage employeeWage = new EmployeeWage();
+                        employeeWage.Attendence();
+                        break;
+                    case 2:
+                        EmployeeWage employeeWage1 = new EmployeeWage();
+                        employeeWage1.CalculatingEmpWage();
                         break;
                     default:
                         Console.WriteLine("Please click error-free option");
