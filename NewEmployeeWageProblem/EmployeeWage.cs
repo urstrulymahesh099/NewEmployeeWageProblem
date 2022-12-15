@@ -52,7 +52,7 @@ namespace NewEmployeeWageProblem
         }
         public void SwitchStatement()
 
-            {
+       {
  
             int empHrs;
             int empWage;
@@ -74,6 +74,38 @@ namespace NewEmployeeWageProblem
             int empwage = empHrs * this.Emp_Rate_Per_Hour;
             Console.WriteLine("Results Of Employee Wage :"+ empwage);  
             
+        }
+        public void CalculatiingMothlyWage()
+        {
+
+            int empHrs=0;
+            int empWage=0;
+            int totalEmpWage;
+            int Emp_Rate_Per_Hour = 20;
+            int NumofdaysWorking = 2;
+            int TotalEmpWage = 0;
+            Console.WriteLine("click options\n1.IS_Full_Time=160\n2.Is_Part_Time=80");
+            for (int day = 0; day < NumofdaysWorking; day++)
+            {
+                int empcheck = random.Next(0, 3);
+                switch (empcheck)
+                {
+                    case 1:
+                        empHrs = 4;
+                        break;
+                    case 2:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+
+                }
+                empWage = empHrs *Emp_Rate_Per_Hour;
+                TotalEmpWage += empWage;
+                Console.WriteLine("Results Of Employee Wage :" + empWage);
+            }
+            Console.WriteLine("Total Emp Wage :"+TotalEmpWage);
         }
     }
 }

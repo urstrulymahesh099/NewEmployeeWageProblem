@@ -8,7 +8,7 @@ namespace NewEmployeeWageProblem
             while(true)
             {
                 Console.WriteLine("*********WelCome To Employee Wage Problem***********");
-                Console.WriteLine("Please Click Below options: \n1.EmployeeAttendence\n2.CalculatingEmpWage\n3.AddEmpPartTimeWage\n4.SwitchStatement");
+                Console.WriteLine("Please Click Below options: \n1.EmployeeAttendence\n2.CalculatingEmpWage\n3.AddEmpPartTimeWage\n4.SwitchStatement\n5.CalculatiingMothlyWage");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -30,6 +30,11 @@ namespace NewEmployeeWageProblem
                     case 4:
                         EmployeeWage employeeWage3 = new EmployeeWage();
                         employeeWage3.SwitchStatement();
+                        Console.WriteLine("**************************************************************************************");
+                        break;
+                    case 5:
+                        EmployeeWage employeeWage4 = new EmployeeWage();
+                        employeeWage4.CalculatiingMothlyWage();
                         Console.WriteLine("**************************************************************************************");
                         break;
                     default:
