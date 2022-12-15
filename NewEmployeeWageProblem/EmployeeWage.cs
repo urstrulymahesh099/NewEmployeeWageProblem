@@ -10,7 +10,7 @@ namespace NewEmployeeWageProblem
     {
         Random random = new Random();
         int IS_Full_Time = 1;
-        int IS_Part_Time = 2;
+        int Is_Part_Time = 2;
         int Emp_Rate_Per_Hour = 20;
         
         public void Attendence()
@@ -39,7 +39,7 @@ namespace NewEmployeeWageProblem
         {
             int empHrs = 0;
             int empCheck = random.Next(0, 3);
-            if( empCheck == this.IS_Part_Time)
+            if( empCheck == this.Is_Part_Time)
             {
               empHrs = 4;
             }
@@ -49,6 +49,31 @@ namespace NewEmployeeWageProblem
             }
             int empwage = empHrs * this.Emp_Rate_Per_Hour;
             Console.WriteLine($"As we Found the Full Time wage is 160Rupees.......\nIf we Got Pull Time wage 160Rupees That is Full Time wage Suppose If We Got Except 160Rupees then that is Part time wage\n Employee Wage is {empwage}");
+        }
+        public void SwitchStatement()
+
+            {
+ 
+            int empHrs;
+            int empWage;
+            Console.WriteLine("click options\n1.IS_Full_Time=160\n2.Is_Part_Time=80");
+            int empcheck=random.Next(0, 3);
+            switch(empcheck)
+            {
+                case 1:
+                    empHrs = 4;
+                    break;
+                case 2:
+                    empHrs = 8;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+
+            }
+            int empwage = empHrs * this.Emp_Rate_Per_Hour;
+            Console.WriteLine("Results Of Employee Wage :"+ empwage);  
+            
         }
     }
 }
